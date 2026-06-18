@@ -9,9 +9,32 @@
 <body>
     <div class="Formulario">
         <div class="round"> 
-            <img class="Logo" src="" alt="">
+            <img class="Logo" src="../../Public/LogoLogin.jpg" alt="Logo">
         </div>
+
+        <div class="wrap-input-label">
+            <label for="Nome"></label>
+            <input type="text" id="Nome" placeholder="Insira seu nome:">
+        </div>
+
+        
+        <div class="wrap-input-label">
+            <label for="Senha"></label>
+            <input type="password" id="Senha" placeholder="Insira sua senha: ">
+            <div onclick="ShowPassword()">
+            </div>
+        </div>
+            <img src="../../Public/view.png" alt="Senha"id="eye"class="eye"width="25px">
+
+
     </div>
+    <button class="btn-login" onclick="login()">Login</button>
+
+    <div class="error-div" id="error-modal">
+        <h3>Credenciais Incorretas</h3>
+        <button onclick="fechaError()"></button>
+    </div>
+
     <script src="Script.js"></script>
 </body>
 </html>
