@@ -10,3 +10,7 @@
     height: 300px;
 
 }
+
+.errorDiv{
+    display: none;
+}

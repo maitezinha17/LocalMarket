@@ -2,7 +2,7 @@
     {
         "id":1,
         "Desc": "Joao Joana",
-        "Imgem": "../../public/gatinho 1.jpeg",
+        "Imgem": "../../public/gatinho 1.jpg",
         "sal": 12000.00
     },
 
@@ -10,7 +10,7 @@
     {
         "id":1,
         "Desc": "Rubia Andrade",
-        "Imgem": "../..public/",
+        "imgem": "../../public/gatinho 2.jpg",
         "sal": 45000.00
     },
 
@@ -18,7 +18,7 @@
     {
         "id":1,
         "Desc": "Brutos Cachorro",
-        "Imgem": "../..public/",
+        "imagem": "../../public/gatinho 3.jpg",
         "sal": 5000.00
     }
 ]
