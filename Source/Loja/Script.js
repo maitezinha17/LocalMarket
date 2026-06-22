@@ -1,9 +1,9 @@
 let produtos
 
 window.onload = function () {
-    var storedUser = localStorage.getItem("usuario");
-    var user = JSON.parse(storedUser);
-    var dataEntrada = new Date(user.dataEntrada);
+    var storedUser = localStorage.getItem("usuario")
+    var user = JSON.parse(storedUser)
+    var dataEntrada = new Date(user.dataEntrada)
 
     var dataFormatada = dataEntrada.toLocaleString("pt-BR", {
         day: "2-digit",
@@ -11,19 +11,21 @@ window.onload = function () {
         year: "numeric",
         hour: "numeric",
         minute: "numeric"
-
     })
 
-    document.getElementById("user").textContent = user.name
-    document.getElementById("perfil").textContent = dataFormatada
-    document.getElementById("idPerfil").textContent = user.id
+    document.getElementById('user').textContent = user.name
+    document.getElementById('perfil').textContent = dataFormatada
+    document.getElementById('idPerfil').textContent = user.id
 }
+
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("../dados/data.json")
+    fetch("../Dados/data.json")
         .then((response) => response.json())
         .then((data) => {
             produtos = data
-            const produtosContainer1 = document.getElementById("produtosContainer")
+
+            const produtosContainer = document.getElementById("produtos-container")
+
             produtos.forEach((produto, index) => {
                 const card = document.createElement("div")
                 card.innerHTML = `
@@ -31,15 +33,36 @@ document.addEventListener("DOMContentLoaded", function () {
                         <img src="${produto.imagem}" class="card-img-top" alt="${produto.desc}">
                         <div class="card-body">
                             <h5 class="card-title">${produto.desc}</h5>
-                            <p class="card-text">${produto.valor.toFixed(2)} R$</p>
-                            <a href="#" class="btn btn-primary adicionar" data-indice="${index}">
-                                Adicionar ao carrinho
+                            <p class="card-text">Salário: $${produto.sal}</p>
+                            <a href="#" class="btn btn-primary adicionar">
+                                Encaminhar
                             </a>
                         </div>
                     </div>
                 `
-                produtosContainer1.appendChild(card)
+                produtosContainer.appendChild(card)
             })
-        }).catch((error) => console.log("Error ao carregar dados", error))
+        }).catch((error) => console.log("Erro ao carregar dados", error))
+
+
+
+
+
+
+document.addEventListener("produtos-container").addEventListener("click", function (event){
+    const btn = event.target.closest(".adicionar")
+    if (!btn) return 
+
+    const indexDoProduto = btn.dataset.indice 
+    const produtoSelecionado = produtos[indexDoProduto]
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || []
+    carrinho.push(produtoSelecionado)
+    localStorage.setItem("carrinho", JSON.stringify(carrinho))
+    alert("Produto adicionado ao carrinho!")
 
 })
+
+
+
+})
+

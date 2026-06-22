@@ -17,19 +17,20 @@ function login(){
     }
 }
 function showPassword(){
-    var senhaInput = document.querySelector("#senha")
-    var img_eye = document.querySelector("#eye")
+    var inputSenha = document.querySelector('#senha')
+    var img_eye = document.querySelector('#eye')
 
-    if(senhaInput.getAttribute("type") === "password"){
-        senhaInput.setAttribute("type", "text");
-        img_eye.setAttribute("src", "/public/hide.png");
+    if(inputSenha.getAttribute("type") === "password"){
+        inputSenha.setAttribute("type", "text")
+        img_eye.setAttribute("src", "../../public/hide.png")
     }else{
-        senhaInput.setAttribute("type", "password");
-        img_eye.setAttribute("src", "/public/view.png");
+        inputSenha.setAttribute("type", "password")
+        img_eye.setAttribute("src", "../../public/view.png")
     }
 }
+
 function fecharError(){
-        document.getElementById("errorModal").style.display = "none";
-        document.getElementById("nome").style.borderBottom = "2px solid gray";
-        document.getElementById("senha").style.borderBottom = "2px solid gray";
+    document.getElementById("error-modal").style.display = "none"
+    document.getElementById("nome").style.borderBottom = "2px solid #090909"
+    document.getElementById("senha").style.borderBottom = "2px solid #090909"
 }

@@ -1,24 +1,20 @@
 [
     {
-        "id":1,
-        "Desc": "Joao Joana",
-        "Imgem": "../../public/gatinho 1.jpg",
-        "sal": 12000.00
+        "id": 1,
+        "desc": "Pereba",
+        "imagem": "../../public/gatinho1novo.png",
+        "sal": 10200.55
     },
-
-
     {
-        "id":1,
-        "Desc": "Rubia Andrade",
-        "imgem": "../../public/gatinho 2.jpg",
-        "sal": 45000.00
+        "id": 2,
+        "desc": "Joana",
+        "imagem": "../../public/gatinho2.png",
+        "sal": 45000.90
     },
-
-
     {
-        "id":1,
-        "Desc": "Brutos Cachorro",
-        "imagem": "../../public/gatinho 3.jpg",
-        "sal": 5000.00
+        "id": 3,
+        "desc": "Sarlene",
+        "imagem": "../../public/gatinho3.png",
+        "sal": 500.00
     }
 ]
