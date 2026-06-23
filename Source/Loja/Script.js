@@ -44,25 +44,4 @@ document.addEventListener("DOMContentLoaded", function () {
             })
         }).catch((error) => console.log("Erro ao carregar dados", error))
 
-
-
-
-
-
-document.addEventListener("produtos-container").addEventListener("click", function (event){
-    const btn = event.target.closest(".adicionar")
-    if (!btn) return 
-
-    const indexDoProduto = btn.dataset.indice 
-    const produtoSelecionado = produtos[indexDoProduto]
-    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || []
-    carrinho.push(produtoSelecionado)
-    localStorage.setItem("carrinho", JSON.stringify(carrinho))
-    alert("Produto adicionado ao carrinho!")
-
 })
-
-
-
-})
-
