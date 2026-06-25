@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "desc": "GATINHO MAGICO",
+        "imagem": "../../public/gatinho1novo.png",
+        "valor": 600.00
+    },
+    {
+        "id": 2,
+        "desc": "GATINHO FOFO",
+        "imagem": "../../public/gatinho2.png",
+        "valor": 1200.00
+    },
+    {
+        "id": 3,
+        "desc": "GaTINHO DO AMOR",
+        "imagem": "../../public/gatinho3.png",
+        "valor": 300.00
+    }
+]

@@ -1,0 +1,93 @@
+:root{
+    --color1: #e90313;
+    --color2: #a3020d;
+    --color3: #009a29;
+    --color4: #ededed;
+    --color5: #FFFFFF;
+    --text1: #000000;
+    --text2: #FFFFFF;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    /* padding: 10px; */
+    background-color: var(--color2);
+}
+
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+.center{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 150px;
+    background-color:hotpink;
+    padding: 3px;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 26px;
+    font-size: 10px;
+    color: var(--text2);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.protocolo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+} 
+
+.carrinho{
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 15px;
+    padding-right: 15px;
+    color: var(--text2);
+    transition: all 0.1s ease-in-out;
+    background-color: rgb(255, 0, 140);
+}
+
+.carrinho:hover{
+    color: var(--text2);
+    background-color: #ff239c;
+}
+
+
+
+
+.card-body{
+    background-color: #ff2aed;
+}
+.card{
+    border:  20px !important;
+    border-color: #ef96f7;
+}
